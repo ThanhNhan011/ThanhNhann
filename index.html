@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giải phương trình bậc 1</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 80px;
+        }
+
+        .input-group input {
+            width: 150px;
+            padding: 5px;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Giải phương trình bậc 1</h1>
+        <div class="input-group">
+            <label for="input-a">Nhập hệ số a:</label>
+            <input type="number" id="input-a">
+        </div>
+        <div class="input-group">
+            <label for="input-b">Nhập hệ số b:</label>
+            <input type="number" id="input-b">
+        </div>
+        <button class="btn" onclick="giaiPhuongTrinh()">Giải phương trình</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function giaiPhuongTrinh() {
+            var a = parseFloat(document.getElementById('input-a').value);
+            var b = parseFloat(document.getElementById('input-b').value);
+            var resultEl = document.getElementById('result');
+
+            if (a === 0) {
+                if (b === 0) {
+                    resultEl.innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    resultEl.innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                var x = -b / a;
+                resultEl.innerHTML = "Nghiệm của phương trình là x = " + x;
+            }
+        }
+    </script>
+  
+<head>
+    <title>Đóng góp ý kiến sản phẩm</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 250px;
+            padding: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Đóng góp ý kiến sản phẩm</h1>
+      <form action="#" method="post">
+            <div class="input-group">
+                <label for="input-name">Họ và tên:</label>
+                <input type="text" id="input-name" required>
+            </div>
+            <div class="input-group">
+                <label for="input-card">Mã thẻ:</label>
+                <input type="text" id="input-card" required>
+            </div>
+            <div class="input-group">
+                <label for="input-phone">Số điện thoại:</label>
+                <input type="tel" id="input-phone" required>
+            </div>
+            <div class="input-group">
+                <label for="input-email">Email:</label>
+                <input type="email" id="input-email" required>
+            </div>
+            <div class="input-group">
+                <label for="input-customer-type">Loại khách hàng:</label>
+                <select id="input-customer-type" required>
+                    <option value="">Chọn loại khách hàng</option>
+                    <option value="vip">VIP</option>
+                    <option value="regular">Regular</option>
+                    <option value="new">New</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="input-invoice">Mã hoá đơn:</label>
+                <input type="text" id="input-invoice">
+            </div>
+            <div class="input-group">
+                <label for="input-description">Chi tiết mô tả:</label>
+                <textarea id="input-description" required></textarea>
+            </div>
+            <button class="btn" type="submit">Gửi ý kiến</button>
+        </form>
+    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <style>
+        /* Định dạng chung */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Tiêu đề trang */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        /* Khung thông tin */
+        .thong-tin {
+            margin: 20px auto;
+            width: 500px;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        
+        /* Nhãn thông tin */
+        .nhan {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Ô nhập liệu */
+        .o-nhap-lieu {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        
+        /* Nút gửi tin nhắn */
+        .nut-gui {
+            background-color: #000;
+            color: #fff;
+            width: 100px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>LIÊN HỆ</h1>
+    <div class="thong-tin">
+        <h2>Thông tin</h2>
+        <p>Hãy liên lạc với chúng tôi bất cứ khi nào!!!</p>
+        <p class="nhan">Địa chỉ:</p>
+        <p>Kp. 6, P. Linh Trung, Tp. Thủ Đức, Tp. HCM</p>
+        <p class="nhan">Email:</p>
+        <p>info@uit.edu.vn</p>
+        <p class="nhan">Điện thoại:</p>
+        <p>+84 28 372 52002</p>
+        <hr>
+        <h2>Liên hệ</h2>
+        <p class="nhan">Họ và tên:</p>
+        <input class="o-nhap-lieu" type="text" name="ten">
+        <p class="nhan">Địa chỉ email:</p>
+        <input class="o-nhap-lieu" type="email" name="email">
+        <p class="nhan">Tiêu đề bài viết:</p>
+        <input class="o-nhap-lieu" type="text" name="tieu-de">
+        <p class="nhan">Nội dung cần gửi:</p>
+        <textarea class="o-nhap-lieu" name="noi-dung" rows="5"></textarea>
+        <br>
+        <button class="nut-gui">GỬI TIN NHẮN</button>
+    </div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tính chỉ số BMI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tính chỉ số BMI</h1>
+  <form id="bmi-form">
+    <label for="can_nang">Cân nặng (kg):</label>
+    <input type="number" id="can_nang" name="can_nang" required>
+    <br>
+    <label for="chieu_cao">Chiều cao (m):</label>
+    <input type="number" id="chieu_cao" name="chieu_cao" required>
+    <br>
+    <br>
+    <button type="submit">Tính</button>
+  </form>
+
+  <div id="bmi-result">
+    <p>Chỉ số BMI của bạn là: <span id="bmi"></span></p>
+    <p>Phân loại BMI:</p>
+    <ul>
+      <li>Dưới 18.5: Gầy</li>
+      <li>18.5 - 24.9: Bình thường</li>
+      <li>25.0 - 29.9: Thừa cân</li>
+      <li>30.0 trở lên: Béo phì</li>
+    </ul>
+  </div>
+<script src="script.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        /* Định dạng chung */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        /* Khung đăng nhập */
+        .khung-dang-nhap {
+            margin: 20px auto;
+            width: 300px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        /* Tiêu đề */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 0;
+        }
+        
+        /* Nhãn thông tin */
+        .nhan {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Ô nhập liệu */
+        .o-nhap-lieu {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        
+        /* Nút đăng nhập */
+        .nut-dang-nhap {
+            background-color: #000;
+            color: #fff;
+            width: 100px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Checkbox */
+        .checkbox {
+            margin-bottom: 10px;
+        }
+        
+        /* Link quên mật khẩu */
+        .quen-mat-khau {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        
+        /* Ảnh logo */
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <div class="khung-dang-nhap">
+        <h1>ĐĂNG NHẬP</h1>
+        <p class="nhan">Tên đăng nhập:</p>
+        <input class="o-nhap-lieu" type="text" name="ten-dang-nhap">
+        <p class="nhan">Mật khẩu:</p>
+        <input class="o-nhap-lieu" type="password" name="mat-khau">
+        <div class="checkbox">
+            <input type="checkbox" name="luu-mat-khau">
+            <label for="luu-mat-khau">Lưu mật khẩu</label>
+        </div>
+        <a class="quen-mat-khau" href="#">Quên mật khẩu?</a>
+        <br>
+        <button class="nut-dang-nhap">ĐĂNG NHẬP</button>
+    </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang đăng nhập</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-form">
+      <h1>Log in</h1>
+      <p>Log in here using your username and passwork</p>
+      <form action="#">
+        <input type="text" placeholder="UserName">
+        <input type="password" placeholder="Passwork">
+        <button type="submit">Log in</button>
+        <a href="#">Forgot Passwork</a>
+        <a href="#">Sign Up</a>
+      </form>
+    </div>
+  </div>
+    
+</body>
+</html>
